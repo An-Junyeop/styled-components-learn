@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import Button from './components/Button';
 
 const AppBlock = styled.div`
@@ -9,11 +9,75 @@ const AppBlock = styled.div`
 	padding: 1rem;
 `;
 
+const ButtonGroup = styled.div`
+	& + & {
+		margin-top: 1rem;
+	}
+`;
+
 function App() {
 	return (
-		<AppBlock>
-			<Button>BUTTON</Button>
-		</AppBlock>
+		<ThemeProvider
+			theme={{
+				palette: {
+					blue: '#228be6',
+					gray: '#495057',
+					pink: '#f06595',
+				},
+			}}
+		>
+			<AppBlock>
+				<ButtonGroup>
+					<Button color='blue' size='large'>
+						BUTTON
+					</Button>
+					<Button color='blue'>BUTTON</Button>
+					<Button color='blue' size='small'>
+						BUTTON
+					</Button>
+				</ButtonGroup>
+				<ButtonGroup>
+					<Button color='gray' size='large'>
+						BUTTON
+					</Button>
+					<Button color='gray'>BUTTON</Button>
+					<Button color='gray' size='small'>
+						BUTTON
+					</Button>
+				</ButtonGroup>
+				<ButtonGroup>
+					<Button color='pink' size='large'>
+						BUTTON
+					</Button>
+					<Button color='pink'>BUTTON</Button>
+					<Button color='pink' size='small'>
+						BUTTON
+					</Button>
+				</ButtonGroup>
+				<ButtonGroup>
+					<Button color='blue' size='large' outline>
+						BUTTON
+					</Button>
+					<Button color='gray' outline>
+						BUTTON
+					</Button>
+					<Button color='pink' size='small' outline>
+						BUTTON
+					</Button>
+				</ButtonGroup>
+				<ButtonGroup>
+					<Button color='blue' size='large' outline fullWidth>
+						BUTTON
+					</Button>
+					<Button color='gray' outline fullWidth>
+						BUTTON
+					</Button>
+					<Button color='pink' size='small' outline fullWidth>
+						BUTTON
+					</Button>
+				</ButtonGroup>
+			</AppBlock>
+		</ThemeProvider>
 	);
 }
 
