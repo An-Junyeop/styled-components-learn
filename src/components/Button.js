@@ -45,7 +45,7 @@ const sizes = {
 const sizeStyles = css`
 	${({ size }) => css`
 		height: ${sizes[size].height};
-		font: ${sizes[size].fontSize};
+		font-size: ${sizes[size].fontSize};
 	`}
 `;
 
