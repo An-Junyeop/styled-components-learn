@@ -1,3 +1,4 @@
+/* 공통으로 사용 될 색상, 크기, 폰트, 미디어 쿼리 등 */
 const margins = {
 	sm: '0.5rem',
 	base: '1rem',
@@ -14,7 +15,7 @@ const paddings = {
 
 const fonts = {
 	family: {
-		base: `'Noto Sans KR, sans-serif`,
+		base: `'Noto Sans KR, sans-serif'`,
 		title: `'Merriweather', serif`,
 	},
 	size: {
